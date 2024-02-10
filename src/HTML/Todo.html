@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CeylonTravel-Todo</title>
+  <link rel="stylesheet" href="../test.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@200&display=swap"
+    rel="stylesheet">
+  <script src="https://kit.fontawesome.com/35997dabd6.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="..//CSS/style1.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+
+<body>
+
+
+  <!--Header section-->
+  <header>
+    <a href="../HTML/home.html" class="logo">Ceylon <span>Travel</span></a>
+    <div class="menu-btn"></div>
+    <div class="navbar">
+      <div class="navlist">
+        <a href="../HTML/home.html">Home</a>
+        <a href="../HTML/infotourist.html">infoTourist</a>
+        <a href="../HTML/About.html">About</a>
+        <a href="../HTML/contact.html">Contact</a>
+        <a href="../HTML/Todo.html" class="todo">To-Do</a>
+      </div>
+    </div>
+  </header>
+
+
+  <div id="app">
+
+    <task-list :tasks="tasks"></task-list>
+  </div>
+
+  <template id="task-list">
+    <div class="todoimg"> 
+      
+      <section class="tasks">
+        <h1>
+          Tasks
+          <transition name="fade">
+            <small v-if="incomplete">({{ incomplete }})</small>
+          </transition>
+
+        </h1>
+        <div class="input-area">
+          <input type="text" class="Enter-Task" v-model="newTask" @keyup.enter="addTask" placeholder="New task">
+          <span class="add-items">
+            <button @click="addTask" class="Add-button">
+              <i class="fa fa-plus"></i> Add
+            </button>
+          </span>
+        </div>
+
+        <div class="Clear-buttons">
+          <button class="clear-completed" @click="clearCompleted">
+            <i class="fa fa-check"></i> Clear Completed
+          </button>
+          <button class="clearall" @click="clearAll">
+            <i class="fa fa-trash"></i> Clear All
+          </button>
+        </div>
+
+        <transition-group name="fade" tag="ul" class="tasks__list no-bullet">
+          <task-item v-for="(task, index) in tasks" @remove="removeTask(index)" @complete="completeTask(task)"
+            :task="task" :key="task"></task-item>
+        </transition-group>
+      </section>
+  </template>
+
+  <template id="task-item">
+    <li class="tasks-item">
+      <button :class="className" @click.self="$emit('complete')">
+        {{ task.title }}
+      </button>
+      <button class="remove-button" @click="$emit('remove')">
+        <i class="fa fa-times"></i>
+      </button>
+    </li>
+  </template>
+  
+  <script src="../JS/index.js"></script>
+
+</body>
+
+</html>

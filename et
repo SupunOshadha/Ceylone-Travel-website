@@ -1,0 +1,27 @@
+[33mcommit a708ab7178ac5c9ccd9f6cbb1933f240203c3c33[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/ss/website[m[33m, [m[1;32mss/website[m[33m)[m
+Author: Supun Oshadha <90458143+SupunOshadha@users.noreply.github.com>
+Date:   Sat Feb 10 07:10:52 2024 +0000
+
+    Ch
+    anged footer
+
+[33mcommit 3c208f222ca6247f6bf490281d939f98d00d717c[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: 9cf0307 86005c7
+Author: Supun Oshadha <90458143+SupunOshadha@users.noreply.github.com>
+Date:   Sat Feb 10 12:22:17 2024 +0530
+
+    Merge pull request #1 from SupunOshadha/ss/web-site-live
+    
+    Adding HTMl,CSS,JS and Video files
+
+[33mcommit 86005c741202f53197a522e4d2fd8019e02267d3[m
+Author: Supun Oshadha <90458143+SupunOshadha@users.noreply.github.com>
+Date:   Sat Feb 10 06:10:06 2024 +0000
+
+    Adding HTMl,CSS,JS and Video files
+
+[33mcommit 9cf030724066cd5163b2eaa936648c248e48eed9[m
+Author: Supun Oshadha <90458143+SupunOshadha@users.noreply.github.com>
+Date:   Sat Feb 10 10:25:50 2024 +0530
+
+    Initial commit
